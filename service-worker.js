@@ -25,16 +25,3 @@ self.addEventListener('fetch', event => {
   );
 });
 
-self.addEventListener('notificationclick', event => {
-    console.log('Notification clicked');
-    event.notification.close();
-});
-
-self.addEventListener('push', event => {
-    const options = {
-        body: event.data.text(),
-    };
-    event.waitUntil(
-        self.registration.showNotification('Task Reminder', options)
-    );
-});
