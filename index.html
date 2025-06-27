@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="/icon.png" type="image/x-icon">
+    <title>ToDo App</title>
+    <script src="idb.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="add-task-container">
+            <h2 class="header">Add New Task</h2>
+            <form class="todo-form">
+                <div class="form-group">
+                    <label class="input-label">Task Title</label>
+                    <input type="text" class="todo-input" placeholder="Enter task title" required> 
+                </div>
+                
+                <div class="form-group">
+                    <label class="input-label">Task Deadline</label>
+                        <div class="time-inputs">
+                            <div class="time-section">
+                                <div class="input-group">
+                                <input type="number" class="todo-input medium" placeholder="HH" min="0" max="23">
+                                <span class="input-suffix">:</span>
+                                <input type="number" class="todo-input medium" placeholder="Mins" min="0" max="59">
+                            </div>
+                            <br class="time-break">
+                            <div class="date-inputs">
+                                <input type="number" class="todo-input medium" placeholder="DD" min="1" max="31">
+                                <span class="input-suffix">/</span>
+                                <input type="number" class="todo-input medium" placeholder="MM" min="1" max="12">
+                                <span class="input-suffix">/</span>
+                                <input type="number" class="todo-input medium" placeholder="YYYY" min="2023">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="todo-button">Add Task</button>
+            </form>
+            <button class="notification-btn todo-button">Enable Notifications</button>
+        </div>
+        
+        <div class="tasks-container">
+            <h2 class="header">My Tasks</h2>
+            <div class="task-list">
+            </div>
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
